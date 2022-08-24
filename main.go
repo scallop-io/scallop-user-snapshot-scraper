@@ -22,15 +22,15 @@ import (
 func main() {
 	fmt.Print("Please enter the pool base of the pool: ")
 	var poolBase string
-	fmt.Scanf("%s", &poolBase)
+	fmt.Scanln(&poolBase)
 
 	fmt.Print("Please enter the start date (yyyy-mm-dd): ")
 	var startDate string
-	fmt.Scanf("%s", &startDate)
+	fmt.Scanln(&startDate)
 
 	fmt.Print("Please enter the end date (yyyy-mm-dd): ")
 	var endDate string
-	fmt.Scanf("%s", &endDate)
+	fmt.Scanln(&endDate)
 
 	fmt.Print("Please enter minimal balance of token that user should had: ")
 	var minimalBalance float64
