@@ -1,6 +1,12 @@
 module github.com/scallop-io/scallop-user-snapshot-scraper
 
-go 1.17
+go 1.19
+
+require (
+	github.com/gagliardetto/binary v0.6.1
+	github.com/gagliardetto/solana-go v1.5.0
+	github.com/spf13/viper v1.12.0
+)
 
 require (
 	contrib.go.opencensus.io/exporter/stackdriver v0.13.4 // indirect
@@ -12,8 +18,6 @@ require (
 	github.com/dfuse-io/logging v0.0.0-20201110202154-26697de88c79 // indirect
 	github.com/fatih/color v1.13.0 // indirect
 	github.com/fsnotify/fsnotify v1.5.4 // indirect
-	github.com/gagliardetto/binary v0.6.1 // indirect
-	github.com/gagliardetto/solana-go v1.5.0 // indirect
 	github.com/gagliardetto/treeout v0.1.4 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
@@ -35,7 +39,6 @@ require (
 	github.com/spf13/cast v1.5.0 // indirect
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
-	github.com/spf13/viper v1.12.0 // indirect
 	github.com/streamingfast/logging v0.0.0-20220405224725-2755dab2ce75 // indirect
 	github.com/subosito/gotenv v1.3.0 // indirect
 	github.com/teris-io/shortid v0.0.0-20201117134242-e59966efd125 // indirect

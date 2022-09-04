@@ -86,12 +86,17 @@ func main() {
 	users := []string{}
 	initialized := false
 
+	periodNumbers := []uint{}
 	for periodNumber := uint(1); periodNumber <= uint(pool.PoolPeriodNumber); periodNumber++ {
-		result, err := snapshots.FetchSnapshot(ctx, poolBase, periodNumber)
-		if err != nil {
-			panic(err)
-		}
+		periodNumbers = append(periodNumbers, periodNumber)
+	}
 
+	results, err := snapshots.FetchMultipleSnapshot(ctx, poolBase, periodNumbers)
+	if err != nil {
+		panic(err)
+	}
+
+	for _, result := range results {
 		if tStartDate.Unix() > result.Timestamp {
 			continue
 		}
