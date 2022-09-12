@@ -114,7 +114,7 @@ func main() {
 		}
 
 		temp := users
-		for i, userAddress := range temp {
+		for _, userAddress := range temp {
 			ok := false
 			for _, user := range result.Users {
 				if user.User == userAddress {
@@ -131,8 +131,13 @@ func main() {
 				}
 			}
 			if !ok {
-				users[i] = users[len(users)-1]
-				users = users[:len(users)-1]
+				result := []string{}
+				for j := 0; j < len(users); j++ {
+					if users[j] != userAddress {
+						result = append(result, users[j])
+					}
+				}
+				users = result
 			}
 		}
 	}
